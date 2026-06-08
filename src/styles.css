@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+  :root {
+  --preto: #0a0a0a;
+  --branco: #ffffff;
+  --laranja: #ff6b00;
+  --azul: #007bff;
+  --cinza: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+button{
+  padding: 10px;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--azul), var(--laranja));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    width: 100%;
+}
+
+button:hover::after {
+    opacity: 1;
+}
