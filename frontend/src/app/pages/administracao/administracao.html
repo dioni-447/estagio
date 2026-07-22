@@ -1,0 +1,22 @@
+<div class="admin-container">
+
+  <div class="admin-header">
+    <h1>Mensagens</h1>
+  </div>
+
+  @if (carregando) {
+    <p>Carregando mensagens...</p>
+  } @else {
+    <div class="mensagens">
+      @for (msg of mensagens; track msg.id) {
+        <div class="mensagem-card">
+          <h2>{{ msg.nome }}</h2>
+          <span class="email">{{ msg.email }}</span>
+          <p>{{ msg.mensagem }}</p>
+          <small>{{ msg.createdAt }}</small>
+        </div>
+      }
+    </div>
+  }
+
+</div>

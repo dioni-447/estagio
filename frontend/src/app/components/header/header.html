@@ -1,0 +1,31 @@
+<div class="menu-btn" (click)="toggleMenu()" aria-label="Abrir menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Menu lateral -->
+<div class="menu-lateral" [class.ativo]="menuAberto">
+  <a href="#home"      (click)="fecharMenu()">Home</a>
+  <a href="#sobre"     (click)="fecharMenu()">Sobre</a>
+  <a href="#servicos"  (click)="fecharMenu()">Serviços</a>
+  <a href="#vantagens" (click)="fecharMenu()">Vantagens</a>
+  <a href="#contato"   (click)="fecharMenu()">Contato</a>
+  @if (auth.isLogado()){
+    <a routerLink="/admin" (click)="fecharMenu()">Administração</a>
+    <button (click)="auth.logout()">
+      Encerrar sessão
+    </button>
+  } @else {
+  <button routerLink="/login">
+    Entrar
+  </button>
+}
+</div>
+
+<!-- Header principal -->
+<header>
+  <a routerLink="/" class="logo" id="logo">
+  <h1>Cândido Software</h1>
+  </a>
+</header>

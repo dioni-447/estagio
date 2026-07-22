@@ -1,0 +1,32 @@
+<main class="login-page">
+
+  <form class="login-form" (ngSubmit)="entrar()">
+
+    <h1>Entrar</h1>
+
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="email"
+      placeholder="Email">
+
+    <input
+      type="password"
+      name="senha"
+      [(ngModel)]="senha"
+      placeholder="Senha">
+
+    <button type="submit">
+      Entrar
+    </button>
+
+    <p>
+      Não possui conta?
+      <a routerLink="/cadastro" class="link">
+        Criar conta
+      </a>
+    </p>
+
+  </form>
+
+</main>

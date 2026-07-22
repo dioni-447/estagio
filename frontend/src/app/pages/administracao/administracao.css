@@ -1,0 +1,59 @@
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+    color: #1e293b;
+}
+
+.mensagens {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.mensagem-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 1.5rem;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+
+    border-left: 5px solid #2563eb;
+}
+
+.mensagem-card h2 {
+    margin-bottom: .3rem;
+    color: #1e293b;
+}
+
+.email {
+    display: block;
+    margin-bottom: 1rem;
+
+    color: #64748b;
+}
+
+.mensagem-card p {
+    line-height: 1.6;
+    color: #334155;
+}
+
+.mensagem-card small {
+    display: block;
+    margin-top: 1rem;
+
+    color: #94a3b8;
+}
