@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Footer } from "../../components/footer/footer";
 import { Header } from "../../components/header/header";
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class Login {
   constructor(private http: HttpClient, private router: Router) {}
 
   entrar() {
-    this.http.post<any>('http://localhost:3333/api/v1/auth/login', {
+    this.http.post<any>(`${environment.apiUrl}/auth/login`, {
       email: this.email,
       password: this.senha
     }).subscribe({

@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 interface Mensagem {
   id: number;
@@ -42,7 +43,7 @@ export class Administracao implements OnInit {
     return;
 }
     this.http.get(
-  'http://localhost:3333/api/v1/mensagens',
+  `${environment.apiUrl}/mensagens`,
   {
     headers: {
       Authorization: `Bearer ${token}`
