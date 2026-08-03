@@ -28,7 +28,7 @@ export class Cadastro {
     this.http.post(
       `${environment.apiUrl}/auth/signup`,
       {
-        fullname: this.name,
+        fullName: this.name,
         email: this.email,
         password: this.password,
         passwordConfirmation: this.passwordConfirmation
